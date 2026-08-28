@@ -31,7 +31,7 @@ class CustomerServiceTest {
 
         List<Customer> result = service.findAll("");
 
-        assertEquals("Hopper", result.get(0).getLastName());
+        assertEquals("Hopper", result.getFirst().getLastName());
         assertEquals("Lovelace", result.get(1).getLastName());
     }
 
