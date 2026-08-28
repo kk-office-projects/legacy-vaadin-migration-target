@@ -9,15 +9,14 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.PageTitle;
 import com.vaadin.flow.router.Route;
-
-import javax.annotation.PostConstruct;
+import jakarta.annotation.PostConstruct;
 
 @Route("")
 @PageTitle("Legacy customers")
 public class MainView extends VerticalLayout {
 
     private final CustomerService service;
-    private final Grid<Customer> grid = new Grid<Customer>(Customer.class);
+    private final Grid<Customer> grid = new Grid<>(Customer.class);
     private final TextField filter = new TextField();
 
     public MainView(CustomerService service) {
